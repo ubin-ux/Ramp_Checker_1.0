@@ -2,14 +2,18 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>주차장 경사로 단면 검토</title>
+  <title>주차장 경사로 단면 검토서</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
   <div class="controls" id="controls-panel">
-    <h2>주차장 경사로 단면 검토</h2>
+    
+    <div class="header-actions">
+      <h2>주차장 경사로 검토</h2>
+      <button onclick="window.print()" class="btn-print">🖨️ PDF 저장</button>
+    </div>
 
     <h3>계산 모드</h3>
     <div class="radio-group">
@@ -68,7 +72,9 @@
     <p id="status"></p>
   </div>
 
-  <svg id="svg" viewBox="0 0 2000 700"></svg>
+  <div class="drawing-area">
+      <svg id="svg" viewBox="0 0 2000 700"></svg>
+  </div>
 </div>
 
 <script src="script.js"></script>
