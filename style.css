@@ -1,6 +1,8 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Malgun Gothic', sans-serif;
+  background: #f4f6f8;
+  color: #333;
 }
 
 .container {
@@ -9,28 +11,132 @@ body {
 }
 
 .controls {
-  width: 380px;
-  padding: 15px;
-  border-right: 1px solid #ccc;
+  width: 420px;
+  padding: 20px;
+  background: white;
+  border-right: 1px solid #ddd;
   overflow-y: auto;
+  box-shadow: 4px 0 10px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
 }
 
+h2 { margin-top: 0; font-size: 1.3rem; color: #2c3e50; }
+h3 { margin: 25px 0 10px; font-size: 0.95rem; color: #7f8c8d; border-bottom: 2px solid #ecf0f1; padding-bottom: 5px; font-weight: bold;}
+
+hr { border: 0; border-top: 1px dashed #ddd; margin: 15px 0; }
+
 label {
-  display: block;
-  margin-bottom: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 0.9rem;
 }
 
 input[type="number"] {
-  width: 140px;
+  width: 90px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+  font-size: 0.95rem;
 }
+
+/* 읽기 전용 인풋 스타일 */
+.readonly-input {
+  background-color: #f9f9f9;
+  color: #555;
+  border: 1px solid #eee;
+}
+
+input[type="radio"] { margin-right: 5px; transform: scale(1.2); }
+.radio-group label { justify-content: flex-start; margin-bottom: 5px; cursor: pointer;}
+
+.input-row {
+  display: flex;
+  gap: 10px;
+}
+.input-row label { flex: 1; }
+.input-row input { width: 100%; box-sizing: border-box; }
+
+/* 동적 구간 스타일 */
+.segment-row {
+  background: #fff;
+  border: 1px solid #dfe6e9;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.03);
+}
+.seg-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  font-size: 0.85rem;
+  font-weight: bold;
+  color: #2980b9;
+}
+.seg-info {
+  text-align: right;
+  font-size: 0.9rem;
+  color: #2c3e50;
+  margin-top: 8px;
+  background: #ecf0f1;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.btn-add {
+  width: 100%;
+  padding: 10px;
+  background: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-size: 0.95rem;
+  font-weight: bold;
+  transition: background 0.2s;
+}
+.btn-add:hover { background: #2980b9; }
+
+.btn-del {
+  background: #e74c3c;
+  color: white;
+  border: none;
+  padding: 4px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.75rem;
+}
+
+.remain-box {
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  color: #856404;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+.remain-box h4 { margin: 0 0 5px; font-size: 0.9rem; }
+.remain-box span { font-size: 0.9rem; display: block;}
 
 svg {
   flex: 1;
-  background: #fafafa;
+  background: #fff;
 }
 
 #status {
-  margin-top: 10px;
-  color: red;
+  margin-top: auto;
+  padding: 10px;
+  color: #c0392b;
   font-weight: bold;
+  text-align: center;
+  background: #fadbd8;
+  border-radius: 4px;
+  min-height: 20px;
 }
+/* 에러 없을 땐 숨김 처리 */
+#status:empty { display: none; }
