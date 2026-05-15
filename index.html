@@ -9,9 +9,9 @@
 
 <div class="container">
   <div class="controls" id="controls-panel">
-    
+
     <div class="header-actions">
-      <h2>주차장 경사로 검토</h2>
+      <h2>🏗 주차장 경사로 검토</h2>
       <button onclick="window.print()" class="btn-print">🖨️ PDF 저장</button>
     </div>
 
@@ -37,23 +37,23 @@
 
     <h3>1. 완화구간 (시점)</h3>
     <div class="input-row">
-      <label>길이 Lf <input id="Lf" type="number" value="3000"></label>
-      <label>높이 hf <input id="hf" type="number" value="160"></label>
+      <label>길이 Lf (mm)<input id="Lf" type="number" value="3000"></label>
+      <label>높이 hf (mm)<input id="hf" type="number" value="160"></label>
     </div>
     <label>구배 Sf (%) <input id="Sf" type="number" value="8"></label>
 
     <hr>
 
     <h3>2. 일반경사구간 (중간)</h3>
-    
+
     <div id="mode1-mid">
       <label>구배 Sm (%) <input id="Sm" type="number" value="17"></label>
     </div>
 
     <div id="mode2-mid" style="display:none;">
       <div id="segment-container"></div>
-      <button type="button" class="btn-add" id="btn-add">+ 구간 추가</button>
-      
+      <button type="button" class="btn-add" id="btn-add">＋ 구간 추가</button>
+
       <div class="remain-box">
         <h4>남은 구간 (자동계산)</h4>
         <div id="remain-txt">계산 중...</div>
@@ -64,8 +64,8 @@
 
     <h3>3. 완화구간 (종점)</h3>
     <div class="input-row">
-      <label>길이 Lb <input id="Lb" type="number" value="3000"></label>
-      <label>높이 hb <input id="hb" type="number" value="160"></label>
+      <label>길이 Lb (mm)<input id="Lb" type="number" value="3000"></label>
+      <label>높이 hb (mm)<input id="hb" type="number" value="160"></label>
     </div>
     <label>구배 Sb (%) <input id="Sb" type="number" value="8"></label>
 
@@ -73,7 +73,7 @@
   </div>
 
   <div class="drawing-area">
-      <svg id="svg" viewBox="0 0 2000 700"></svg>
+    <svg id="svg" viewBox="0 0 2000 720" xmlns="http://www.w3.org/2000/svg"></svg>
   </div>
 </div>
 
